@@ -58,7 +58,6 @@ var Article = React.createClass({
 });
 
 var News = React.createClass({
-
     propTypes: {
         data: React.PropTypes.array.isRequired
     },
@@ -106,20 +105,6 @@ var Add = React.createClass({
         var text = ReactDOM.findDOMNode(this.refs.text).value;
         alert(author + "\n" + text);
     },
-    // onAuthorChange: function (e) {
-    //     if (e.target.value.trim().length > 0) {
-    //         this.setState({authorIsEmpty: false})
-    //     } else {
-    //         this.setState({authorIsEmpty: true})
-    //     }
-    // },
-    // onTextChange: function (e) {
-    //     if (e.target.value.trim().length > 0) {
-    //         this.setState({textIsEmpty: false})
-    //     } else {
-    //         this.setState({textIsEmpty: true})
-    //     }
-    // },
     onFieldChange: function (fieldName, e) {
         if (e.target.value.trim().length > 0) {
             this.setState({['' + fieldName]: false})
@@ -185,8 +170,7 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-    <App/>
-    ,
+    <App/>,
     document.getElementById('root')
 );
 
